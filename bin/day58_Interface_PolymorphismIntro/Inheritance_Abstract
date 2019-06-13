@@ -1,0 +1,82 @@
+2 way to achieve abstraction in java
+                                     1. abstract class
+                                     2. interface
+
+why interface: 1. multiple inheritance
+               2.
+INTERFACE:
+         ALL PUBLIC: by default,access modifier for all members of Interface
+         PUBLIC STATIC any fields 
+members:
+          constant : 
+                         public static final field
+          abstract method: 
+                         //till JAVA8 , 
+                         an in interface could only have above memebers default method
+                         it is declared using default keyword and it has body
+                         it makes easier to add new functionality into interface without breaking existing functionalities
+          static method:
+                        it's mostly used as utility method that not attached any object
+          Object:       
+                        we can only access static method of interface using static way--->> InterfaceName.methodName
+                        It is not inherited
+                        
+        any fields are autimatically public static final 
+	any method without a body --automatically public abstract 
+
+	How many interface a class can implemnet -->> NO LIMIT 
+		public class Student implement Teachable, Hirable, Offerable {}
+
+	CAN a interface extends anotehr interface -->> YES , ONE OR MORE 
+		public interface Mammal extends Animal, Pet, OtherInterfaces{
+
+		} 
+		the purpose is to reuse the methods that exists in interface 	that being extended 
+                        
+           
+ ABSTRACT CLASS:
+                it is declared using abstract keyword
+                public abstract clas Student {
+                }
+                it cannot be instantinated : NO OBJECT
+                it may contain abstract method
+members: 
+                Fields: 
+                       instance+static
+                       final + non-final
+                       private, protected, default, public
+                
+                Constructor:
+                       any constructor it can have like normal class
+                
+                methods:
+                       abstract method
+                       non - abstract method
+                       instance + static
+                       final method
+                
+                blocks:
+                       instance
+                       static block 
+                       
+How many class a class can extend -->>> ONLY 1 !!!!!
+
+can a abstract class implements a interface 
+		
+		public interface Pet{
+			public abstract void feedPet(); 
+		}
+		would this code compile ? 
+		
+		public abstract class Cat implements Pet{
+
+			//public abstract void feedPet(); 
+
+		}	
+		public class SpartanCat extends Cat{
+			public void feedPet(){
+				//feed your cat with milk 
+			} 
+		}
+                                
+                           

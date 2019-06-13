@@ -1,0 +1,38 @@
+Abstraction:
+           means we focus on the essential qualities of something rather than
+           abstract keyword is used to create abstract method
+
+Abstract method: does not have body, only have signature
+                 As long as there is one abstract method 
+                    whole class should be abstract
+                 
+                 can be overloaded:
+                 EX: 
+                    public abstract void eat(String food);
+                    public abstract void eat (String food, int amount);
+                    
+Abstraction class: concrete method
+                   can have everything that normal class can have
+           
+           this 
+           Ex:
+              public abstract void attendClass();
+           if there is at least one abstract method, class should be abstract:
+           Ex:
+              public abstract class Student{}
+           can not create abstract class obj,
+           it provides guide line to subclass
+           
+ every abstract method need to be implemented
+                           1. Add implemented method
+ 
+ FINAL, PRIVATE, STATIC Methods cannot be abstract, as they cannot be Overriden
+ 
+ Static method   : cannot be overriden so it cannot be abstract method
+ Final  method   : cannot be overriden so it cannot be abstract method
+ Private methods : cannot be overriden so it cannot be abstract method
+ 
+ ABSTRACT SUB CLASS:
+                   NOT REQUIRED TO IMPLEMENT/OVERRIDE ABSTRACT METHODS, INHERITED FROM SUPER CLASS
+                   has option to provide implementation so subclass of this class can use 
+                   it as is or override what is inherited
