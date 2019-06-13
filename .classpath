@@ -4,9 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="REPL"/>
 	<classpathentry kind="src" path="Mentoring"/>
-	<classpathentry kind="src" path="Interview"/>
-	<classpathentry kind="src" path="CodingBat"/>
 	<classpathentry kind="src" path="OCA"/>
-	<classpathentry kind="src" path="HackerRank"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
