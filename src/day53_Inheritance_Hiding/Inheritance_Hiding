@@ -1,0 +1,83 @@
+Inheritance:
+           IS-A Relationship
+           a sub class can inherit all visible fields and methods from superclass
+           
+           we use extends keyword to build this relationship
+           
+           //if you want to see grant parent field you can access through parent
+Access modifiers: visibility
+                           public    --- everywhere
+                           protected --- same package + sub classes outside the package
+                           default   --- same package
+                           private   --- same class
+
+Constructor in inheritance relationship:NOT INHERITED
+                                        it can be called in sub class by using super (args...)
+
+super () : a call to super classess no arg constructor
+
+super (args...) & this(args...): can only be called once
+                                 has to be first statement
+                                 cannot show up together
+super. : is used to access super class's field and methods
+         can only access direct parent method not grandparent
+
+super. && this.: MUST NOT show up in main method
+                 this.  instance of template
+                 super. instance of super class
+                 
+                 
+Method Overriding: 
+                  we have option to override the super class method with new implementation to
+                  provide sub class version of the method
+                  
+                  Exclusively for INSTANCE METHODS!!!
+                   
+                  we can just override the method to have same implementation
+                  EX:
+                    in super class:   ---> public void doSomething (){
+                                              print ("do Something");
+                                           }
+                    in sub class :    ---> @Override
+                                           public void doSomething (){
+                                              super.doSomething();//calling super class method
+                                              doSomething();      //will call same class method and causes recursive calling
+                                           }
+
+Hiding Fields:
+              if sub class define a visible field that already exists in super class
+              it hides super class version of the field
+              Sub class can hide super class's field by redeclaring it the only thing matters is the <NAME>
+              there can be different data type, visibility, instance/static
+              
+              GENERALLY: should be avoided as it causes confusion
+              
+              There is no overriding concept for fields
+              they can only be hidden not overriden
+              so @Override will give error when declared on top of field or static method
+
+Hiding Methods vs Overriding: 
+              if sub class define a visible static method that already exists in super class
+              it hides super class version of the method     
+             
+        Hiding  : all about static method
+        Override: all about instance
+
+SUMMARY:
+Method Overriding:
+        Super class  -- Sub class have same instance method
+
+Method Hiding:
+        Super class  -- Sub class have same static method 
+
+ERRORRRRRR:
+        Super class have static  -- Sub class have same instance method
+
+ERRORRRRRR:
+        Super class isntance -- Sub class have same static method 
+
+FINAL KEYWORD:
+
+
+ //We can have more than one class in one source file
+ //however onlyone should be public       

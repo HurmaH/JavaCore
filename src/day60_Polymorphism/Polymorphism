@@ -1,0 +1,46 @@
+Polymorphism:
+             is ability of the object taking many form
+             or an object can be referred by it's own type or it's super class type
+             or it's interface type that the class implemented
+             
+POWER POLYMORPHISM:
+                  making correct decision at runtime according actual object type
+                  to call the overriden version of the method
+                  
+                  EX: Animal a1 = new Dog();
+                  a1.makeNoise(); //woof woof
+                  
+                  This will give us a lot of flexibility while writing to code
+                  we can easily swap the implementation to get correct behaviorat runtime
+                  we can group objects together by it's general types and take general actions without worrying about details
+                  
+                  EX: Animal[] allAnimals = {new Dog(), new Cat(), new Horse()};
+                      for (Animal each : allAnimal) {
+                           each.makeNoise();
+                      }
+                  
+                      
+                  EX: What you can access using a2 reference?
+                      Animal a2 = new Horse();
+                      
+                      Answer: only the members that available in Animal class
+                              in order to access Horse specific members
+
+What’s accessible is purely decided by reference type 
+for any kind of members, we have the method in super class , 
+we are overriding in sub class so we have them both in 
+super class and sub class for overridden method
+
+COmpile time it picks from reference type, during run time 
+                           
+                           if the method is overriden it will use that one
+                           if the field is hidden Reference type decides to use parent field, 
+                               since fields cannot be overriden but hidden
+                           if static method is hidden Referance type will choose parent static option
+
+we get all methods automatically and inside body of those method , it call super class version of the method 
+by default if it is not overridden as we saw on screen
+  
+  
+  STATIC POLYMORPHISM: METHOD OVERLOADING
+  DYNAMIC OVERLOADING: METHOD OVERIDING, mostly used one                            

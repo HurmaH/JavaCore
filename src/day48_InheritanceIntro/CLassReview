@@ -1,0 +1,24 @@
+Class is blueprint for object
+
+Inside class: 
+			- instance fields: can be used to define propertis of objects, they belong to object
+		   -- Static fields belong to the class, there is only one copy of this value among all objects
+		      static String race = "Human";
+		  --- Constructor: is used to create object with initial state or setting the value of instance field
+		                   has same name with class, 
+		                   has no return type
+		                   it run automaticaly when object is created
+		 ---- Instance Methods: an object is needed to access instance method
+		 						used to read or modify  property of objects/instance field values
+		----- Getters & Setters: are best practice of incapsulating private field to protect data
+	   ------ Static Methods :  static members should be accessed in static way : ClassName.staticFiels or ClassName.staticMethod (args...)
+	                            of your method does no action related to properties of the object/instance fields
+	                            then it is always good to just make it static
+	  ------- Initializer Block : 
+	                             Static block: it will run only once when class is loaded 
+	                                           Class is loaded when any of it's members being accessed for first time
+	                                           
+	                             Instance Block: it has no name {}
+	                             				 it will run every time an object is created
+	                             				 this is almost like having above code in each and every constructor
+	                             				 this is the piece of code that run right befor you enter constructor of that class.                                          
