@@ -11,14 +11,25 @@ public class _187_RemoveAll {
 	}
 	
 	public static void removeAll (ArrayList<String> wordList, String targetWord){
+		   ArrayList <String> word= new ArrayList<>();
+		    
+		    for(String each: wordList){
+		      
+		      if(!each.equals(targetWord)){
+		       word.add(each);
+		      
+		      }
+		    }
+		 System.out.println(word);
 		
-		for(int i=0; i<wordList.size(); i++) {
-			if (wordList.get(i).equals(targetWord)) {
-				wordList.remove(i);
-			}
-		}
-		
-		System.out.println(wordList);
+//		for(int i=0; i<wordList.size(); i++) {
+//			if (wordList.get(i).equals(targetWord)) {
+//				wordList.remove(i);
+//		 i--;
+//			}
+//		}
+//		
+//		System.out.println(wordList);
 		
 //		ArrayList <String> newWords = new ArrayList <String>();
 //		  
@@ -29,5 +40,5 @@ public class _187_RemoveAll {
 //		  }
 //		  System.out.println(Arrays.toString(newWords.toArray()));
 		  
-		}
+   }  
 }

@@ -1,0 +1,53 @@
+ EXCEPTION:
+          is object and have class, that comes from related  and package
+          1. Compile error
+          2. IndexOutOfBoundException
+          3. NullPointerException
+          4. ArithmaticException
+          5. ClassCastException
+          NullPointerException npe = new NullPointerException(); 
+          throw npe;
+Exception Handling:
+                   Any type of action to process any kind of error
+                   (catch, recover, notify, diagnose)
+TRY CATCH block 
+               is used to wrap up a piece of code that anticipated to throw certain type of Exception                 
+               and catch the exceptiontht happen if it happen
+               and either try to recover from it or just report it 
+               so the program does not shutdown and continue to execute
+       
+try {
+// some code that might throw exception
+} catch (Exception e) {
+// TODO: handle exception
+}
+
+try {
+// some code that might throw exception
+} catch (Exception e) {
+// TODO: handle exception
+}finally {
+// actions regardless of exception thrown or not
+}
+
+important one type excepption canno be cought by another type of Exception
+
+but there is MULTI TRY CATCH:
+        //whenever there is exception comes, program goes outside of try block immidiatly
+		//looks for related catch
+                             try {
+									// some code that might throw exception
+							 } catch (ArithmaticException e) {
+									// TODO: handle exception
+							 } catch (NullpointerException e) {
+									// TODO: handle exception
+							 } catch (ArrayIndexOutOfBoundsException e){
+									//atch (Aritmetic e)
+							 }
+another constructor of exception class with argument 
+
+throwable is a interface
+
+CHECKED EXCEPTION:  There are some exceptioptions that need to be handled before running program
+UNCHECKED EXCEPTION:MUST be handled at runtime 						 
+ 

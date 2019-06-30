@@ -1,0 +1,27 @@
+CASTING: converting one type to another type Implicitly or explicitly
+Types in Java: 
+              1. Primitive types
+                 byte --> short --> int --> long --> float --> double
+                 *Widening Primitive happens implicitly:  
+                  int i = 5; long l =i
+                 *Narrowing Primitive Conversions has to be explicit cast:
+                  long l = 10L; int i = (int)l;
+              2. Reference Types
+                 *Upcasting:
+                  Casting from a subclass to a superclass is called upcasting
+                  Typically, the upcasting is implicitly performed by compiler
+                  
+                 *Downcasting
+                 Casting from a superclass to a subclass  is called downcasting
+                 It has to be performed by the programmer explicitly
+          
+
+ONLY REFERENCE TYPE DECIDE WHAT MEMBER CAN BE ACCESSIBLE USING THE REFERENCE VARIABLE
+     ex: Animal a = new Dog();
+                a can access only the members that visible to the Animal 
+                a.makeNoise() --> woof
+                
+     //what if you really want to access anything that exists in the sub class
+       - Casting is used for that purpose
+       Dog d = ( Dog ) a;
+       d.dogStuff();

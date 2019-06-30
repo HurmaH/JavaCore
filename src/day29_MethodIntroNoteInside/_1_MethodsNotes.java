@@ -155,3 +155,237 @@ METHOD OBSERVED
  */
 
 
+/*
+ *str.toUpperCase(); 
+in the above statement: toUpperCase is a method of String class.
+
+input.nextInt()
+.next();
+.nextDouble();
+
+System.out.println(message);
+println is a method/action. When you use it, it performs some actions.
+
+main method -> JDK starts execution of your code from main method.
+======================
+
+Writing custom/our own methods:
+=================
+
+Benefit of writing methods, in some languages methods are called functions:
+- reusable code
+- organize code
+- maintainable code
+- readable code/simple to read
+===================================
+
+Anytime you write a method in Java, it is associated to a class.
+You write methods within classes.
+
+Class is template:
+can have 2 things:
+- data/attributes
+- behaviour/methods
+
+
+================
+
+
+public static void main(String[] args) {
+sayHello(); // calling sayHello method
+sayHello();
+}
+
+public static void sayHello() {
+System.out.println("Hello");
+System.out.println("Hi!");
+}
+
+
+We can define our custom methods within a class.
+All methods must be written within a class, it cannot be written outside the class.
+
+We can put any number of statements that we want to reuse within the methods. 
+Once we write the methods, they do not run unless you call/use them.
+
+When you are calling , you type method name and 
+it will go and execute the code within that custom method.
+
+
+public class Main{
+public static void main(String[] args) {
+sayHello();
+sayBye();
+sayBye();
+sayBye();
+sayBye();
+System.out.println("Bye! Have a good day!");
+}
+
+
+public static void sayBye() {
+System.out.println("Adios! Tenga buen dia! ");
+}
+
+public static void sayHello() {
+System.out.println("Hello");
+System.out.println("Hi!");
+}
+
+}
+
+==================
+
+Part by part analysis of the method definition:
+Methods can be different, the below method is
+void and does not accept parameters.
+
+
+public static void sayHello() {
+System.out.println("Hello");
+}
+
+public -> access modifier that means this method is visible to the world. Can be called from any class in the same project.
+public, protected, <default>, private
+
+static -> is a modifier that means it belongs directly to the class and not dependent on object. Method can be called by classname.
+Method can be called without creating the object.
+
+Ex:
+Arrays.sort(arr) -> sort is a static method and called by using classname 
+Scanner input = new Scanner(System.in);
+input.nextInt();
+
+void -> means that this method does not return a value.
+-> it means when we call this method, it performs some actions
+but does not return a value back to us.
+
+sayHello();
+
+public static void sayHello() {
+System.out.println("Hello");
+}
+
+String str = "java";
+
+int l = str.length();
+
+print l
+
+System.out.println(str.length());
+
+In the example of length() -> the method return a int value.
+
+When method is void, it does not return anything.
+
+VOID == NO RETURN VALUE
+
+We cannot say:
+String message = sayHello();
+System.out.println ( sayHello() );
+
+-----
+public static void sayHello() {
+System.out.println("Hello");
+}
+sayHello -> is a method name. normally we start with lowercase letter then rest is camelCase. it should be meaningful name, and 
+it follows same rules of variable naming.
+
+sayHello () -> we need to always put paranthesis, and in this example it is empty but anytime we can pass inputs/arguments/parameters . By declaring variable in it.
+==========================
+
+Can static be used with variables?
+
+Yes, but it needs to be outside any method.
+
+========================
+
+
+public static void sayHelloTo(String name) {
+System.out.println("Hello " + name);
+}
+
+sayHelloTo(String name) -> it means whenever we call sayHelloTo methods, we need to give Strign value to it. 
+String name -> is a method input/arguments/parameter
+
+
+sayHelloTo(); // will not work , since we defined this method to accept a string value.
+
+
+sayHelloTo("Nazim"); // this will work, since we are passing String input to the method.
+=============================
+
+Summary:
+
+- introduction to custom methods
+- purpose and benefits of writing methods
+- few keywords overview
+- syntax of how to create:
+1) VOID methods that does not accept any parameters
+2) VOID methods that accept one or more parameters
+
+  
+ */
+
+//------------------------------------
+/*
+ * CUSTOM METHOD CREATION IN JAVA
+
+1. void methods in java
+
+- collection of statements
+- group the statements into one block
+
+Logic: 
+1. purpose 
+ex: charAt() --> giving us the char of a given index
+trim() --> getting rid of extra white spaces around the string. 
+2. naming
+- you should name the short version of purpose of method.
+
+3. dependent information
+
+
+Rules:
+1. method signature
+Ex: public static void printLastLetter(String name){
+// code here
+name
+}
+
+public static void myOwnMethod(String s){
+printLastLetter(s);
+}
+
+variable 'name' is local to printLastLetter method. 
+There is no WAY 'name' can go outside of this method.
+
+String s = "James";
+int i = s.charAt(0);
+
+
+--------------------------
+
+psv arrayStringReplace(String[] arr, String target, String r){
+
+if(r.equals("Adam")){
+return;
+}
+}
+
+return; ---> keyword that terminates the method execution.
+
+---------------------------
+
+REturn methods
+
+-> replace 'void' keyword in method signature with datatype that you want to return.
+
+ 
+
+
+public static void method(String [] arr, int i){
+
+}
+ */
+

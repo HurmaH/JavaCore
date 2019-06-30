@@ -1,4 +1,5 @@
 Polymorphism:
+             ONLY REFERENCE TYPE DECIDE WHAT MEMBER CAN BE ACCESSIBLE USING THE REFERENCE VARIABLE
              is ability of the object taking many form
              or an object can be referred by it's own type or it's super class type
              or it's interface type that the class implemented
@@ -43,4 +44,49 @@ by default if it is not overridden as we saw on screen
   
   
   STATIC POLYMORPHISM: METHOD OVERLOADING
-  DYNAMIC OVERLOADING: METHOD OVERIDING, mostly used one                            
+  DYNAMIC POLYMORPHISM: METHOD OVERIDING, mostly used one     
+  
+  
+  -----------------------------------------------------------------
+  
+  Polymorphism:
+               
+               ex: Animal a = new Dog();
+                   a.makeNoise();//woof
+                   a=new Cat();
+                   a.makeNoise();//miao
+                   Animal makeNoise -->> Dog --->>woof, Cat miao   
+                   
+                   List<String> lst = new ArrayList <>();
+                   
+               It provides flexibility
+               we can group objects together by it's general type
+               
+               ex: Animal[] animals = {new Dog(), new Cat(), new Horse() };
+               
+ Method parameters:
+               ex: public static void AnimalNoiseTester (Animal anyAnimal) {
+                   }
+                   
+ what argument can be passed to above method:
+ 
+ AnimalNoiseTester( new Dog() );
+ AnimalNoiseTester( new Cat() );
+ 
+ Return Type:
+            public static Animal getAnimal() {
+                   return -->> new Dog() or new Cat() or new Horse()
+            }
+            
+         
+ 
+            //each class in java implicitly extend Object if not already extending another class
+            // interface does not have this concept
+            
+            WebDriver driver = new ChromeDriver(); 
+            
+            ex: Animal a = new Dog();
+                a can access only the members that visible to the Animal 
+                a.makeNoise() --> woof
+                
+            //what if you really want to access anything                       

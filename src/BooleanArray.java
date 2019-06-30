@@ -7,7 +7,7 @@ public class BooleanArray {
         bool[0] = new Boolean (true );
         System.out.println(Arrays.toString(bool));
         
-        Boolean[] bool2 = new Boolean[2];
+        //Boolean[] bool2 = new Boolean[2];
         
         		Boolean.valueOf( Boolean.parseBoolean("true") );
         

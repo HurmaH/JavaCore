@@ -13,13 +13,17 @@ public class PrimeNumbersTable implements TableGenerator, Primes {
     @Override
     public  boolean isPrime(int number) {
 
-    	for (int i=2; i<=9; i++) {//check division given number to all one digit numbers
-    		if((number<=1) || (number%i==0 && number !=2)) { //
-    			return false;
-    		}
+    if (number<=1) {
+    	return false;
+    }
+    
+    for (int i=2; i<=Math.sqrt(number); i++) {
+    	if (number%i == 0) {
+    		return false;
     	}
-    	return true;
-        
+    }
+    
+    return true;
        
     }
 
@@ -49,9 +53,7 @@ public class PrimeNumbersTable implements TableGenerator, Primes {
        int [] primeArr = new int[numberOfEntries];
        
        for (int i=0 ; i<numberOfEntries; i++) {
-            if (start==1) {
-            	start++;
-            }
+            
         	while(!isPrime(start)) {//stop loop when start isPrimestart is not prime  if (isPrime(start)) {
         	   start++;	  
         	}
@@ -93,24 +95,31 @@ public class PrimeNumbersTable implements TableGenerator, Primes {
     @Override
     public boolean checkTable(int start, int[] tableToTest) {
        //TODO:
+    	int len = tableToTest.length;
+    	int []newTable = generateTable (start, len);
     	
-    	if (tableToTest[0] != start && start !=1) {
-    		return false;
-    	}
-    	
-    	for (int i=0; i<tableToTest.length; i++) {
-    		if ((i<tableToTest.length-1 && 
-    		    tableToTest[i]<tableToTest[i+1] &&
-    		    isPrime(tableToTest[i])==true) ||
-    				
-    		    (i==tableToTest.length-1 && 
-		        tableToTest[i-1]<tableToTest[i] &&
-		        isPrime(tableToTest[i])==true)){
-    				return true;
+    	for (int i=0; i<len; i++) {
+    		if (tableToTest[i] != newTable[i]) {
+    			return false;
     		}
     	}
-    	
-    	return false;
+    	return true;
     }
+//    if ((isPrime(start) && tableToTest[0]!=start) || 
+//       	isPrime(tableToTest[len-1])==false) {
+//    	  return false;
+//    }
+//    
+//    if (!isPrime(start) ) {
+//    	
+//    }
+//    
+//     for (int i=0; i<len-1; i++ ) {
+//    	   if (isPrime(tableToTest[i]) && tableToTest[i]<tableToTest[i+1] ) {
+//    		   return true;
+//    	   }
+//       }
+//    return false;
+//    }  
 
 }

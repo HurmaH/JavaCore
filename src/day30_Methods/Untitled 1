@@ -1,0 +1,217 @@
+CLASSNOTES VA: Day 32
+10/20/2018
+----------
+
+Java programming Day 32.
+------------------------
+
+Methods:
+
+What are methods?
+- Methods are behaviour that contains repeatable code/reusable actions/statements.
+- Methods are behaviour of classes/objects
+
+Why do we need methods in Java programming? What is the benefit?
+- readablity
+- reusability of code
+- easy maintain the code
+- more organized code
+- more efficient programming because of reusability
+- easier to debug
+
+What best practices of Programming you follow?
+- I try to organize my code into reusable methods and 
+make my code easy to read and maintain.
+==============================================
+
+How to create methods in Java?
+
+We create/define methods in the Class.
+And it will be attached/related to that class.
+
+public class MyClass{
+public static void main(String[] args) {
+myMethod1(); 
+myMethod1();
+//Today is Saturday, we are studying Java methods
+
+myMethod2("Saturday");
+//Today is Saturday, we are studying Java methods
+
+myMethod2("Sunday");
+//Today is Sunday, we are studying Java methods
+
+myMethod2("Tuesday");
+//Today is Tuesday, we are studying Java methods
+
+myMethod3("Wednesday", "ArrayLists");
+myMethod3("Saturday", "Java Methods");
+}
+
+public static void myMethod1(){
+String day = "Saturday";
+String myclass = "Java methods";
+System.out.println("Today is " + day +", we are studying " + myclass);
+
+}
+public static void myMethod2(String day) {
+String myclass = "Java methods";
+System.out.println("Today is " + day +", we are studying " + myclass);
+}
+
+public static void myMethod3(String day, String topic) {
+System.out.println("Today is " + day +", we are studying " + topic);
+}
+
+public static void myMethod4(String day, int hours, String topic) {
+System.out.println("Today is " + day +", we are studying " + topic +
+" for " + hours + " hours.");
+}
+
+}
+
+
+MethodsWithReturn
+==========================
+
+2 methods with same name and parameter list cannot be defined in same class.
+Below will not work since both of them have same name and no parameters.
+public class A{
+public static void sayHi() {
+System.out.println("Hi!");
+}
+
+
+public static void sayHi() {
+System.out.println("Hello!");
+}
+
+}
+
+We need to make the name different or change a parameter list
+
+
+public class A{
+public static void sayHi() {
+System.out.println("Hi!");
+}
+
+public static void sayHello() {
+System.out.println("Hello!");
+}
+
+public static void sayHi(int n) {
+for(int i = 1; i <= n; i++)
+System.out.println("Hi!");
+}
+public static void sayHi(String name) {
+
+System.out.println("Hi! " + name);
+}
+
+}
+=================================================
+
+
+AGENDA:
+Methods with return value
+Methods with return value and accepting parameter(s)
+
+ArrayList
+StringBuilder
+
+Methods with ArrayList and StringBuilder
+======================
+
+OOP in Java.
+
+==============================================
+
+
+String name = "Bob";
+System.out.println(name);
+
+
+int[] nums = {23,43,54,46};
+Arrays.sort(nums);
+
+The above examples are void methods that do not return a value. It runs some statements but does not return value.
+
+------
+
+
+String month = "October";
+int i = month.indexOf("t");
+
+month.indexOf("t");
+
+String month = "October";
+char ch = month.charAt(0);
+
+boolean b = month.isEmpty();
+
+
+The above String method examples, each of them run some statements and return a value at the end. indexOf return a number, charAt return a char, isEmpty return boolean.
+
+==================================
+
+Methods that return a value.
+
+public static int giveme5$() {
+return 5;
+}
+
+
+public static int giveme5$() {
+int d = 5;
+return d;
+}
+
+public static String getPresidentName() {
+return "Donald Trump";
+}
+
+
+public static String whatisYourName() {
+String name = "Murodil";
+return name;
+}
+
+=================================
+
+
+public static int myMethod(String str) {
+return str.length();
+}
+
+Accept type and return type does not have to be same.
+
+It can be different types.
+
+boolean b = str.contains("abc");
+================================
+
+ 
+
+Summary:
+Methods:
+Methods that return a value
+without parameters
+with parameters
+===================================
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
