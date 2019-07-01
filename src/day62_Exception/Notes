@@ -1,0 +1,175 @@
+ EXCEPTION:
+ 		  is object and have class, that comes from related  and package
+          Non-typical , exceptional condition that signal a
+          Piece of code could not execute normally
+          
+          1. Compile error
+          2. IndexOutOfBoundException
+          3. NullPointerException
+          4. ArithmaticException
+          5. ClassCastException
+          NullPointerException npe = new NullPointerException(); 
+          throw npe;
+         
+          
+ Exception Hirierchy:
+                     Object --> Throwable(Super Class of all Exceptions):
+                     throwable is a interface
+                     
+                     1.Error:
+                                Error (unchecked)
+                     2.Exception: 
+                                IOException (checked)
+                                SQLException (checked)
+                                BrokenBarrierException (checked)
+                                
+                                RuntimeException (unchecked)
+                                  - NullPointerException (unchecked)
+                                  - ArithmeticException (unchecked)
+ 
+ **********************************************************************
+                                 
+CHECKED EXCEPTION:  
+                  There are some exceptions that need to be 
+                  handled during compile time
+                  Anything Exception but not a runtime exception
+                  
+UNCHECKED EXCEPTION: 
+                  MUST be handled at compile time
+                  Usually Programmer ERROR, LOGICAL ERRORS, USER INVALID INPUTS
+                  
+                  !!!ANYTHING THAT IS_A RUNTIME EXCEPTION + SUB CLASS OF ERROR CLASS
+                  !!!(should not be handled)!!!
+****************************************************************         
+
+Exception Handling:
+                   Any type of action to process any kind of error
+                   (catch, recover, notify, diagnose)
+TRY CATCH block 
+               is used to wrap up a piece of code that anticipated to throw certain type of Exception                 
+               and catch the exceptiontht happen if it happen
+               and either try to recover from it or just report it 
+               so the program does not shutdown and continue to execute
+*******************************************
+How to handle exception
+                we use try catch block
+
+try {
+     // things you want to execute
+     // some code that might throw exception
+} catch (TypeOfException name) {
+     // TODO: handle exception
+      // action if exception happens
+}
+*******************************************
+FINALLY key word: 
+                finally block will run wether you have exception or not
+                
+
+try {
+     // things you want to execute
+     // some code that might throw exception
+     
+} catch (TypeOfException name) {
+    // TODO: handle exception
+     // action if exception happens
+}finally {
+     // actions regardless of exception thrown or not
+}
+
+***********************************
+IMPORTANT:
+          one type exception cannot be cought by another type of Exception
+***********************************
+
+but there is MULTI TRY CATCH:
+        //whenever there is exception comes, program goes outside of try block immidiatly
+		//looks for related catch
+                             try {
+									// some code that might throw exception
+							 } catch (ArithmaticException e) {
+									// TODO: handle exception
+							 } catch (NullpointerException e) {
+									// TODO: handle exception
+							 } catch (ArrayIndexOutOfBoundsException e){
+									//atch (Aritmetic e)
+							 }
+
+another constructor of exception class with argument 
+
+            // if you have multi try catch block and 
+		    // if they have parent child relationshiop 
+		    // most specific exception should come first --> catching fish and net example
+
+******************************
+
+COMBINE MULTI CATCH BLOCK
+             : catch exceptions doing same exceptions can be combined by "|"
+             // COMBINING MULTIPLE EXCEPTION TYPE USING | 
+             // This is introduced in Java 7 
+             Ex: 
+               try {
+                   //System.out.println( 6/0 ); // -->>ArithmeticException object is created 
+                   //throw new ArithmeticException("6 divided by 0"); 
+                   throw new ClassCastException();
+                   //int[] arr = {1,2} ;
+                   //System.out.println( arr[100] );
+      
+      
+    } catch (ArithmeticException | ArrayIndexOutOfBoundsException| NullPointerException e1) {
+      
+      System.out.println("Target Exception happen");
+      
+    } catch (Exception e) {
+    
+      System.out.println("not target Exception happen");
+    
+    }
+    
+    ******************************
+ Scope in Try Catch Blok:
+                        // if a variable is defined in a block ,
+		                // it's only accessible within that block
+		                
+*****************************************************
+Final and Finally key word difference:
+                                      Finally only used in try and catch block
+                                      final variable cannot be reassigned, 
+                                      final method cannot be overriden but possible override, 
+                                      final class cannot be inherited
+/* POSSIBLE COMBINATIONS : 
+		     * 
+		     * try catch 
+		     * 
+		     * try catch finally 
+		     * 
+		     * try catch catch catch .. .finally 
+		     * 
+		     * try finally   -->> POSSIBLE BUT DO NOT DO IT IN REAL LIFE !!!
+		     */                              
+*****************************************************
+
+THROW vs THROWS
+         THROW :is used to programmatically throw anything that IS_A ThROWABLE
+                we can throw either checked or unchecked exception
+                checked exception must be handled or declared
+                
+                it must be used inside a method followed by exception object
+                EX: throw new Exception();
+                
+         TROWS: is used to declare|document a method might throw exception of some kind //declaring exception                              
+                EX: public static void doSomething throws SomeException {}
+                
+                we can declare both checked and unchecked exception
+                declaring method tht throw checked exception will pass the responsibility
+                of handling exception to the caler of the method
+                
+                declaring the method that throw unchecked exception will not do anything
+                calling the method will not require to handle the exception t compile time
+                
+                it can be only used in method signuture, NOWHERE ELSE!!!
+                
+                We can declar as many type as possible    
+
+						 
+ 

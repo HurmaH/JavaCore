@@ -1,0 +1,73 @@
+ // HOT INTERVIEW QUESTIONS : 
+      
+      HOW CAN YOU CREATE YOUR CUSTOM EXCEPTION 
+      
+      
+      Creating a type of Unchecked Exception
+      
+         ANYTHING THAT IS-A RUNTIMEEXCEPTION IS UNCHECKED EXCEPTION 
+         
+       
+        public class TooManyOfferException extends RuntimeException {
+        
+        }
+        public class HorseTiredException extends RuntimeException {
+        }
+        
+        public class BrainOutOfMemoryException extends RuntimeException {
+        }
+        
+        
+        Throwable  + Anything that sub class of Exception but not sub class of RuntimeException 
+        is considered as Checked exception 
+        
+          Creating a type of checked Exception
+      
+         ANYTHING THAT IS-A ATypeOfCheckedException IS CHECKED EXCEPTION 
+         
+      
+      public class NotReadForClassException extends Exception {} 
+      public class MyCustomCheckedException extends InterruptedException {} 
+      
+      
+      
+      
+      /* POSSIBLE COMBINATIONS : 
+		     * 
+		     * try catch 
+		     * 
+		     * try catch finally 
+		     * 
+		     * try catch catch catch .. .finally 
+		     * 
+		     * try finally   -->> POSSIBLE BUT DO NOT DO IT IN REAL LIFE !!!
+		     * */
+		     
+* is-a relationship
+* Creating a type of unchecked exception
+* anything that is a subclass,
+* anything that is a runtime exception
+* public class toManyOfferException extends
+RuntimeException {} this is how you extend and make
+sub type
+* public class SnailTiredException extends
+RuntimeException {}
+* public class BrainOutOfMemoryException
+extends RuntimeException {}
+*
+*
+* * *How do you create a checked exceptions?
+* Anything that subclass of Exception but not
+sub class of RuntimeException(not in checked
+exception)
+* Anything that is a typeOfCheckedException
+is checked exception
+* public class notReadForException extends
+Exception {}
+* public class MyCustomForException extends
+InterruptedException {}
+*
+*
+* Custom, why, domain specific exception, own
+type of exceptions fit to your company
+********************* *********************** *************************
