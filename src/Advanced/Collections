@@ -1,0 +1,32 @@
+JAVA COLLECTION FRAMEWORK:
+-is a collection of interfaces and classes which helps 
+ in storing and processing the data efficiently.
+
+-has several useful classes have useful functions 
+ which makes a programmer task easy
+ 
+LIST
+-ordered collection/sequence
+-may contain duplicate elements:
+
+    1.ARRAYLIST
+    2.LINKEDLIST
+    3.VECTOR
+    
+SET
+-cannot contain duplicate elements
+-makes no guarantees concerning the order of iteration
+     
+     1.HashSet
+     2.LinkedHashSet
+     3.TreeSet
+     
+MAP
+-object that makes keys to values
+-cannot contain duplicate keys
+
+      1.HashMap
+      2.TreeMap
+      3.LinkedHashMap
+
+

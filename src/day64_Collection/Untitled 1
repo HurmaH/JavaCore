@@ -1,0 +1,20 @@
+ArrayList VS LinkedList
+
+ArrayList: 
+          is backed by array, whenever we try to add or remove item
+          it's automatically resizing underlying array for us
+          so we can just call the method
+LinkedList:
+
+
+Adding & Removing items:
+        in situation adding and removinf it is better to use LinkedList 
+        1.LinkedList is faster: because it is just need to creat new pointer to the neighbour
+        2.ArrayList is slower: because of resizing operation in underlying
+
+Random Access by index/ get(4)
+        in situation accessing randomlyovinf it is better to use LinkedList 
+        1.LinkedList is slower: it has to go through each and every neighbour before the element
+        2.ArrayList is fatser: it can directly jump to the element since it's backed by array
+
+    
