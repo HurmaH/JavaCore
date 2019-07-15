@@ -1,5 +1,11 @@
 package day64_Collection;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+
+
 public class IteratingThings {
 	
 public static void main(String[] args) {
@@ -50,7 +56,7 @@ public static void main(String[] args) {
 		// Iterator is only used to iterate items not hold items itselfs 
 		// in a nut shell, Iterator here is not the list itself
 		// it’s just a tool to iterate over the items
-		System.out.println(“Iterator itself :” + myIter1); 
+		System.out.println("Iterator itself :" + myIter1); 
 		
 		// Above iterator only work one direction 
 		
@@ -68,7 +74,7 @@ public static void main(String[] args) {
 		while(myIter2.hasNext()) {
 			Integer item = myIter2.next(); // saving the value of item
 			if(item>50) {
-				System.out.println(“removing “+ item);
+				System.out.println("removing "+ item);
 				myIter2.remove(); // remove item at current position
 			}
 		}
